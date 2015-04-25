@@ -1,0 +1,19 @@
+/*
+Theme Name:     spa211
+Description:    Custom theme built for Spa211 based on WP Day Spa.
+Author:         Amy Powell
+Template:       day-spa
+
+(optional values you can add: Theme URI, Author URI, Version)
+*/
+
+@import url("../day-spa/style.css");
+
+
+p.footer-logo {
+  text-align: center;
+}
+
+p.footer-logo img {
+  width: 200px;
+}
