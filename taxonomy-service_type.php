@@ -40,7 +40,18 @@ get_header(); ?>
 			$i = 0; 
 			$d = 1;
 
-			while ( have_posts() ) : the_post(); ?>
+			while ( have_posts() ) : the_post();
+
+			$sub_head = get_post_meta( get_the_id(), 'translation', true );
+			$price_one = get_post_meta($post->ID, '_ct_price_one', true);
+			$time_one = get_post_meta($post->ID, '_ct_time_one', true);
+			$price_two = get_post_meta($post->ID, '_ct_price_two', true);
+			$time_two = get_post_meta($post->ID, '_ct_time_two', true);
+			$price_three = get_post_meta($post->ID, '_ct_price_three', true);
+			$time_three = get_post_meta($post->ID, '_ct_time_three', true);
+
+
+			 ?>
 				
 				<li class="service col span_4 <?php if ($i % 3 == 0) { echo 'first'; } ?>">
 	    	<div class="service-inner">
