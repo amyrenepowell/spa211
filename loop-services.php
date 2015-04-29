@@ -9,6 +9,7 @@
 global $ct_options;
 
 ?>
+
 <ul>
 
 	<?php
@@ -18,12 +19,12 @@ global $ct_options;
 
 		$args = array(
 			'post_type' => 'services',
-			'posts_per_page' => -1
+			'posts_per_page' => 10000
 		);
 		$query = new WP_Query($args);
 
 	while ( $query->have_posts() ) : $query->the_post();
-
+		$sub_head = get_post_meta( get_the_id(), 'translation', true );
 		$price_one = get_post_meta($post->ID, '_ct_price_one', true);
 		$time_one = get_post_meta($post->ID, '_ct_time_one', true);
 		$price_two = get_post_meta($post->ID, '_ct_price_two', true);
@@ -42,7 +43,14 @@ global $ct_options;
 		    	echo '</figure>';
 	    	} ?>
 
-				<h4><?php the_title(); ?></h4>
+	    		<div class="service-title">
+					<h4><?php the_title(); ?></h4>
+
+					<?php if ( !empty( $sub_head ) ): ?>
+					    <h5><?= $sub_head ?></h5>
+					<?php endif ?>
+				</div>
+
 				<?php the_content(); ?>
 
 				<?php
