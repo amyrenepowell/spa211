@@ -17,3 +17,91 @@ p.footer-logo {
 p.footer-logo img {
   width: 200px;
 }
+
+#masthead {
+  background: rgba(246,244,243,0.9);
+}
+
+#masthead.sticky {
+background: rgba(246,244,243,0.9);
+}
+
+.sticky img.site-logo {
+  width: 100px;
+  height: auto;
+  padding: 5px 0;
+}
+
+.sticky .cbp-tm-menu > li > a {
+  padding: 5px 0 0;
+}
+
+.sticky ul#cbp-tm-menu {
+  line-height: 20px;
+}
+
+body.admin-bar #masthead {
+  top: 0!important;
+}
+
+.sub-menu > li > a {
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.sub-menu > li > a:visited {
+  color: #fff !important;
+}
+
+footer .widget { border: none; padding: 0; }
+
+
+.contact-social li a:hover { background-color: #836778 !important; }
+
+footer .contact-social li a, footer .contact-social li a:visited { color: #FFF!important; }
+
+a.btn, btn, #reply-title small a, .comment-reply-link, form input[type="submit"], input[type="reset"], input[type="btn"] {
+  border-radius: 0;
+  border: none;
+  background: #836778 !important;
+}
+
+.show-hide {
+  border-radius: 0;
+  background: #836778;
+  }
+
+
+.service h5 { text-align: center;  }
+.service-title { border-bottom: 1px solid #efefef; padding-bottom: 10px; text-align: center; }
+@media only screen and (max-width: 959px) {
+
+#mobile-nav li a {
+  border-bottom: 1px solid #8d8580;
+  color: #8d8580 !important;
+}
+
+ul#mobile-nav {
+  margin: 0;
+  padding: 0;
+}
+
+a.show-hide:visited {
+  color: #fff !important;
+}
+
+}
+
+
+/*------ Desktop only styling ----*/
+@media (min-width: 768px) { 
+
+footer .widget {
+  height: 300px;
+  padding: 0 20px 0 0;
+  border-right: 1px solid #333;
+}
+
+
+}
+
