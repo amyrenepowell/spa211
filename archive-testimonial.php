@@ -15,7 +15,7 @@ get_header(); ?>
 	<div id="archive-header">
 		<div class="dark-overlay">
 			<div class="container">
-				<h1 class="marT0 marB5"><?php _e('Services', 'contempo'); ?></h1>
+				<h1 class="marT0 marB5">Testimonies and Reviews</h1>
 			</div>
 		</div>
 	</div>
@@ -30,7 +30,7 @@ get_header(); ?>
 			<!-- Archive Inner -->
 			<div class="archive-inner">
 
-				<?php get_template_part( 'loop','services'); ?>
+				<?php get_template_part( 'loop','testimonial'); ?>
 
 			</div>
 			<!-- //Archive Inner -->
