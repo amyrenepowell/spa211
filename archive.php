@@ -1,23 +1,21 @@
 <?php
 /**
- * Archive Template
+ * Services Archive Template
  *
  * @package WP Day Spa
  * @subpackage Template
  */
 
-global $ct_options;
-
 get_header(); ?>
 
 	<!-- Archive Header Image -->
-	<?php echo woc_display_category_image(); ?>
+	<?php woc_display_category_image(); ?>
 
 	<!-- Archive Header -->
 	<div id="archive-header">
 		<div class="dark-overlay">
 			<div class="container">
-				<h1 class="marT0 marB5"><?php woc_archive_header(); ?></h1>
+				<h1 class="marT0 marB5"><?php _e('Services', 'contempo'); ?></h1>
 			</div>
 		</div>
 	</div>
@@ -27,12 +25,12 @@ get_header(); ?>
 	<div class="container archive marT60 padB60">
 
 		<!-- Posts Loop -->
-		<div class="col span_9">
+		<div class="col span_12 first">
 
 			<!-- Archive Inner -->
 			<div class="archive-inner">
 
-				<?php get_template_part( 'loop','services'); ?>
+				<?php get_template_part( 'loop','servicetype'); ?>
 
 			</div>
 			<!-- //Archive Inner -->

@@ -110,10 +110,7 @@ $phone = isset( $ct_options['ct_contact_phone_header'] ) ? esc_attr( $ct_options
                     <a href="<?php echo home_url(); ?>"><img class="site-logo" src="<?php echo $ct_options['ct_logo']; ?>" alt="<?php bloginfo('name'); ?>" /></a>
                 <?php } else { ?>
                     <a href="<?php echo home_url(); ?>"><img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/images/day-spa-logo.png" alt="WP Day Spa, a WordPress theme by Contempo" /></a>
-                <?php } ?>
-
-                <span class="sticky-logo"><img src="/wp-content/themes/spa211/images/spa211-stickylogo.png" /></span>
-				
+                <?php } ?>				
 			</div>
 			<div class="col span_5">
                 <div class="col span_11">

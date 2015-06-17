@@ -30,7 +30,48 @@ get_header(); ?>
 			<!-- Archive Inner -->
 			<div class="archive-inner">
 
+				<div class="service-description container">
+					
+
+<?php
+
+// load all 'category' terms for the post
+$terms = get_the_terms( get_the_ID(), 'service_type');
+
+
+// we will use the first term to load ACF data from
+if( !empty($terms) ) {
+
+$term = array_pop($terms);
+$size = 'medium';
+
+$image = get_field('image', $term, $size );
+}
+
+?>
+
+<div class="col span_5 first">
+<img src="<?php echo $image ?>">
+</div>
+
+<div class="col span_7">
+
+<?php echo category_description(); ?>
+</div>
+
+
+</div>
+
+
+
 				<?php if ( have_posts() ) : ?>
+
+<?php
+
+global $query_string;
+query_posts( $query_string . '&posts_per_page=-1' . '&orderby=menu_order' . '&order=ASC' );
+
+?>
 			
 
 			<?php /* The loop */ ?>
@@ -41,14 +82,13 @@ get_header(); ?>
 			$d = 1;
 
 			while ( have_posts() ) : the_post();
-
-			$sub_head = get_post_meta( get_the_id(), 'translation', true );
-			$price_one = get_post_meta($post->ID, '_ct_price_one', true);
-			$time_one = get_post_meta($post->ID, '_ct_time_one', true);
-			$price_two = get_post_meta($post->ID, '_ct_price_two', true);
-			$time_two = get_post_meta($post->ID, '_ct_time_two', true);
-			$price_three = get_post_meta($post->ID, '_ct_price_three', true);
-			$time_three = get_post_meta($post->ID, '_ct_time_three', true);
+				$sub_head = get_post_meta( get_the_id(), 'translation', true );
+				$price_one = get_post_meta($post->ID, '_ct_price_one', true);
+				$time_one = get_post_meta($post->ID, '_ct_time_one', true);
+				$price_two = get_post_meta($post->ID, '_ct_price_two', true);
+				$time_two = get_post_meta($post->ID, '_ct_time_two', true);
+				$price_three = get_post_meta($post->ID, '_ct_price_three', true);
+				$time_three = get_post_meta($post->ID, '_ct_time_three', true);
 
 
 			 ?>
